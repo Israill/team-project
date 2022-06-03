@@ -4,7 +4,7 @@ const Review = require("../models/Review.model");
 module.exports.reviewController = {
     getReviews: async (req, res) => {
         try {
-            const getRew = await Review.find({})
+            const getRew = await Review.find()
             res.json(getRew);
         } catch (e) {
             res.json(e);
